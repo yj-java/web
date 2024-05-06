@@ -1,25 +1,22 @@
 package org.yj.web.seckill.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.yj.web.common.Result;
-import org.yj.web.common.StringRedisUtil;
 
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * RedisController
+ */
 @RequestMapping("/redis")
 @RestController
 public class RedisController {
 
-    @Autowired
-    private RedisTemplate redisTemplate;
-    @Autowired
-    private StringRedisUtil stringRedisUtil;
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
@@ -146,7 +143,7 @@ public class RedisController {
      */
     @RequestMapping("/delete")
     public Result delete(String key) {
-        redisTemplate.delete(key);
+        stringRedisTemplate.delete(key);
         return Result.success();
     }
 }
