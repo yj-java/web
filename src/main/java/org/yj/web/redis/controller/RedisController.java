@@ -1,4 +1,4 @@
-package org.yj.web.seckill.controller;
+package org.yj.web.redis.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;

@@ -3,3 +3,9 @@ spring:
     host: 127.0.0.1
     port: 6379
     database: 1
+rocketmq:
+  name-server: localhost:9876
+  producer:
+    group: producer-group
+  consumer:
+    group: consumer_group
