@@ -9,3 +9,7 @@ rocketmq:
     group: producer-group
   consumer:
     group: consumer_group
+
+elasticsearch:
+  port: 9200
+  ip: 127.0.0.1
